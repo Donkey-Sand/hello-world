@@ -6,5 +6,6 @@ public class HelloWorld {
     }
 
     public static  int i;
+    public static  int j;
 
 }
