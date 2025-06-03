@@ -36,6 +36,12 @@
 - 使用 Serverless Framework 部署 FastAPI 到 AWS Lambda
 - 使用 API Gateway 接收请求，并通过 JWT 验证（Cognito Authorizer）
 
+- 1. React 用户登录 → Cognito 返回 JWT Token
+2. React 发 API 请求 → 请求头带上 Authorization: Bearer xxx
+3. API Gateway 验证这个 Token（通过 Cognito Authorizer）
+4. 验证通过 → 请求转发给 Lambda
+5. Lambda 返回数据给前端
+
 ### 用户登录注册流程
 - 使用 AWS Amplify 集成 Cognito 登录注册
 - 注册后需邮箱验证码验证（可选）
